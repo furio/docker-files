@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bash
+
+until [[ -e /var/run/dbus/system_bus_socket ]]; do
+	sleep 1s
+done
+
+until lpstat -v;
+do
+	sleep 5s
+done
+
+echo "Avahi putting printers"
+rm -r /etc/avahi/services/*
+(/etc/airprint-generate.py -d /etc/avahi/services) || true
+
+echo "Starting Avahi daemon"
+exec avahi-daemon --no-chroot --no-drop-root

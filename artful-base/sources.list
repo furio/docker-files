@@ -1,0 +1,18 @@
+# See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
+# newer versions of the distribution.
+
+deb http://archive.ubuntu.com/ubuntu/ artful main restricted
+deb-src http://archive.ubuntu.com/ubuntu/ artful main restricted
+
+deb http://archive.ubuntu.com/ubuntu/ artful-updates main restricted
+deb-src http://archive.ubuntu.com/ubuntu/ artful-updates main restricted
+
+deb http://archive.ubuntu.com/ubuntu/ artful universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ artful universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ artful-updates universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ artful-updates universe multiverse
+
+deb http://archive.ubuntu.com/ubuntu/ artful-security main restricted
+deb-src http://archive.ubuntu.com/ubuntu/ artful-security main restricted
+deb http://archive.ubuntu.com/ubuntu/ artful-security universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ artful-security universe multiverse
