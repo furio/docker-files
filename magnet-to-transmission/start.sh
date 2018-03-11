@@ -26,17 +26,20 @@ fi
 
 while true
 do
-	for MAGNET in $TR_DIR/*.magnet
-	do
-		echo "Parsing file $MAGNET"
-		MGNLINK=$(<"$MAGNET")
-		transmission-remote $TR_IP $TR_OPTIONS --add $MGNLINK
-		# echo $MGNLINK
-		if [ $? -eq 0 ]
-		then
-			mv "$MAGNET" "$MAGNET.added"
-		fi
-	done
+	ls $TR_DIR/*.magnet &> /dev/null
+	if [ $? -eq 0 ]
+	then
+		for MAGNET in $TR_DIR/*.magnet
+		do
+			echo "Parsing file $MAGNET"
+			MGNLINK=$(<"$MAGNET")
+			transmission-remote $TR_IP $TR_OPTIONS --add $MGNLINK
+			if [ $? -eq 0 ]
+			then
+				mv "$MAGNET" "$MAGNET.added"
+			fi
+		done
+	fi
 
 	sleep $TR_SLEEP
 done
