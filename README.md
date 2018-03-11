@@ -9,3 +9,6 @@ artful-base/ => linuxbase.io base image with artful from scratch
 
 magnet-to-transmission/ => a simple script to watch magnet and send to transmission
 
+cloudflare-ddns/ => from oznu to set an ip in cloudflare like ddns
+
+
