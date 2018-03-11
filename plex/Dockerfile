@@ -1,4 +1,4 @@
-FROM furi/artful-base
+FROM furio/artful-base
 
 # set version label
 ARG BUILD_DATE
