@@ -11,4 +11,5 @@ magnet-to-transmission/ => a simple script to watch magnet and send to transmiss
 
 cloudflare-ddns/ => from oznu to set an ip in cloudflare like ddns
 
+docker-sickrage/ => from linuxbase.io with modification for old directory layout (lazy)
 
