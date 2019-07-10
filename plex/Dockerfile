@@ -17,6 +17,9 @@ PLEX_MEDIA_SERVER_MAX_PLUGIN_PROCS="6" \
 PLEX_MEDIA_SERVER_USER=abc
 
 RUN \
+ echo "**** sed repo ****" && \
+ sed -i 's/security\.ubuntu\.com/old\-releases\.ubuntu\.com/g' /etc/apt/sources.list && \ 
+ sed -i 's/archive\.ubuntu\.com/old\-releases\.ubuntu\.com/g' /etc/apt/sources.list && \
  echo "**** install packages ****" && \
  apt-get update && \
  apt-get upgrade -y && \
