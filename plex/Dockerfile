@@ -37,7 +37,6 @@ RUN \
  echo "**** change abc home folder to fix plex hanging at runtime with usermod ****" && \
  usermod -d /app abc && \
  usermod -a -G video abc && \
- usermod -a -G video plex && \
  echo "**** cleanup ****" && \
  apt-get clean && \
  rm -rf \
@@ -45,6 +44,8 @@ RUN \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
+
+# usermod -a -G video plex && \
 
 # add local files
 COPY root/ /

@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.python:3.8
+FROM lsiobase/alpine.python3:3.9
 
 # set version label
 ARG BUILD_DATE
@@ -11,9 +11,9 @@ ENV PYTHONIOENCODING="UTF-8"
 
 RUN \
  echo "**** install packages ****" && \
- apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/main \
-	nodejs && \
+# apk add --no-cache \
+#	--repository http://nl.alpinelinux.org/alpine/edge/main \
+#	nodejs && \
  echo "**** install app ****" && \
  git clone --depth=1 https://github.com/SickChill/SickChill.git /app/sickrage
 

@@ -3,5 +3,5 @@
 umask 022
 
 exec \
-	s6-setuidgid abc python /app/sickrage/SickBeard.py \
-	--datadir /config
+	s6-setuidgid abc python3 /app/sickrage/SickChill.py \
+	--datadir=/config --port 8081

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGENAME=furio/plex
+IMAGENAME=furio/plex:latest
 
 
 PUID=1000
